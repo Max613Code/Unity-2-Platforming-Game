@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
             if (transform.position.x > targetLoc)
             {
                 movingRight = false;
-                GetComponent<Rigidbody2D>().velocity = new Vector2(speed,0);
+                GetComponent<Rigidbody2D>().velocity = new Vector2(-speed,0);
                 targetLoc = targetLoc - TravelDistance;
             }
         }
@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour
             if (transform.position.x < targetLoc)
             {
                 movingRight = true;
-                GetComponent<Rigidbody2D>().velocity = new Vector2(-speed,0);
+                GetComponent<Rigidbody2D>().velocity = new Vector2(speed,0);
                 targetLoc = targetLoc + TravelDistance;
             }
         }
